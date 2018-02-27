@@ -13,7 +13,7 @@ protected: // 仅从序列化创建
 
 // 特性
 public:
-
+CSplitterWnd m_wndSplitter;
 // 操作
 public:
 

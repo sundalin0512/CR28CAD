@@ -7,6 +7,7 @@
 #include "Rectangle.h"
 #include "PenBrushDlg.h"
 #include "OperatorManager.h"
+#include "CR28CADDoc.h"
 
 #define  WM_MYMESSAGE WM_USER + 1
 class CCR28CADView : public CView
@@ -37,13 +38,13 @@ class CCR28CADView : public CView
 		OPTYPE_MOVESHAPE //移动
 	};
 
-	private:
+	public:
 	LOGPEN m_logpen;
 	LOGBRUSH m_logbrush;
 
 	typedef IShape* (*PFN_CREATESHAPE)();
 
-	private:
+	public:
 	CPoint m_ptMoveBegin0; //移动图形起点
 	CPoint m_ptMoveBegin; //移动图形起点
 	CPoint m_ptMoveEnd;//移动图形终点

@@ -78,6 +78,9 @@
     <ClInclude Include="MoveOperator.h">
       <Filter>Operator</Filter>
     </ClInclude>
+    <ClInclude Include="CADTreeView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CR28CAD.cpp">
@@ -127,6 +130,9 @@
     </ClCompile>
     <ClCompile Include="MoveOperator.cpp">
       <Filter>Operator</Filter>
+    </ClCompile>
+    <ClCompile Include="CADTreeView.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

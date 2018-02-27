@@ -51,10 +51,10 @@ END_MESSAGE_MAP()
 CCR28CADView::CCR28CADView() :
 	m_bOnDraw(FALSE),
 	m_pCurrentShape(NULL),
-	
-	m_pShapeFactory(NULL),
-	m_dwOperaterType(OPTYPE_NULL)
 
+	m_pShapeFactory(NULL),
+	m_dwOperaterType(OPTYPE_NULL),
+	m_optmgr(NULL)
 {
 	m_logpen.lopnStyle = BS_SOLID;
 	m_logpen.lopnWidth.x = 1;
@@ -65,7 +65,7 @@ CCR28CADView::CCR28CADView() :
 
 CCR28CADView::~CCR28CADView()
 {
-	
+
 }
 
 BOOL CCR28CADView::PreCreateWindow(CREATESTRUCT& cs)
@@ -225,6 +225,7 @@ int CCR28CADView::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	if (!pDoc)
 		return -1;
 	m_lstShapes = &GetDocument()->m_lstShapes;
+	m_optmgr.m_pDoc = GetDocument();
 	return 0;
 }
 
@@ -395,6 +396,7 @@ void CCR28CADView::OnShapePenbrush()
 		m_logpen = dlgPenBrush.m_logpen;
 		m_logbrush = dlgPenBrush.m_logBrush;
 	}
+
 }
 
 

@@ -31,6 +31,10 @@ class CEllipse :
 
 	virtual void AddRotate(float rotate) override;
 	virtual void Serialize(CArchive& ar) override;
+	std::wstring GetShapeName()
+	{
+		return L"Ellipse";
+	}
 private:
 	LOGPEN m_logpen;
 	LOGBRUSH m_logbrush;

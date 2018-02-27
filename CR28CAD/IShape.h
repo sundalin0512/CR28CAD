@@ -1,4 +1,6 @@
 #pragma once
+#include <string>
+
 class IShape : public CObject
 {
 public:
@@ -16,6 +18,7 @@ public:
   virtual CPoint GetCenterPos() = 0;
   virtual float GetRotate() = 0;
   virtual void AddRotate(float rotate) = 0;
+  virtual std::wstring GetShapeName() = 0;
 };
 
 class IShapeFactory

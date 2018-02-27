@@ -2,8 +2,9 @@
 #include "OperatorManager.h"
 
 
-OperatorManager::OperatorManager()
+OperatorManager::OperatorManager(CCR28CADDoc * pDoc)
 {
+	m_pDoc = pDoc;
 }
 
 
@@ -43,6 +44,7 @@ void OperatorManager::AddOperator(IOperator* pOperator)
 		}
 		m_stackToRedo.pop();
 	}
+	m_pDoc->UpdateAllViews(NULL);
 }
 
 void OperatorManager::Redo()
@@ -58,6 +60,8 @@ void OperatorManager::Redo()
 	m_stackToRedo.pop();
 	pOperator->Redo();
 	m_stackToUndo.push(pOperator);
+
+	m_pDoc->UpdateAllViews(NULL);
 }
 
 void OperatorManager::Undo()
@@ -73,4 +77,5 @@ void OperatorManager::Undo()
 	m_stackToUndo.pop();
 	pOperator->Undo();
 	m_stackToRedo.push(pOperator);
+	m_pDoc->UpdateAllViews(NULL);
 }

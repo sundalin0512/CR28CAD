@@ -7,6 +7,8 @@
 #define IDR_MAINFRAME                   128
 #define IDR_CR28CADTYPE                 130
 #define DLG_PENBRUSH                    311
+#define IDR_MENU1                       313
+#define IDR_TREEMENU                    313
 #define CMB_PENSYLE                     1000
 #define EDT_PENWITH                     1001
 #define CMB_BRUSHSYLE                   1002
@@ -27,15 +29,16 @@
 #define MN_SHAPE_ELLIPSE                32782
 #define ID_32783                        32783
 #define MN_SHAPE_ROTATE                 32784
-#define ID_ACCELERATOR32786             32786
+#define ID_AA_32787                     32787
+#define ID_MENU_TREESETTING             32788
 #define BMP_TEST                        65535
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        313
-#define _APS_NEXT_COMMAND_VALUE         32787
+#define _APS_NEXT_RESOURCE_VALUE        314
+#define _APS_NEXT_COMMAND_VALUE         32789
 #define _APS_NEXT_CONTROL_VALUE         1005
 #define _APS_NEXT_SYMED_VALUE           310
 #endif

@@ -6,6 +6,8 @@
 #include "CR28CAD.h"
 
 #include "MainFrm.h"
+#include "CR28CADView.h"
+#include "CADTreeView.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -116,5 +118,19 @@ BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT lpcs, CCreateContext* pContext)
 {
 	// TODO: 在此添加专用代码和/或调用基类
 
-	return CFrameWnd::OnCreateClient(lpcs, pContext);
+	BOOL bRet = m_wndSplitter.CreateStatic(this, 1, 2);
+	if (bRet)
+	{
+		bRet = m_wndSplitter.CreateView(0, 0, RUNTIME_CLASS(CADTreeView), SIZE{ 200,100 }, pContext);
+		bRet = m_wndSplitter.CreateView(0, 1, RUNTIME_CLASS(CCR28CADView), SIZE{ 100,100 }, pContext);
+	}
+
+	CRect rcClient;
+	GetClientRect(rcClient);
+	m_wndSplitter.SetRowInfo(0,
+		rcClient.Height() / 2,
+		rcClient.Height() / 3);
+
+	return bRet;
+	//return CFrameWnd::OnCreateClient(lpcs, pContext);
 }

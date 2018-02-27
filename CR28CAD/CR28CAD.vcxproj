@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddOperator.h" />
+    <ClInclude Include="CADTreeView.h" />
     <ClInclude Include="CEllipse.h" />
     <ClInclude Include="Cline.h" />
     <ClInclude Include="ColorButton.h" />
@@ -123,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AddOperator.cpp" />
+    <ClCompile Include="CADTreeView.cpp" />
     <ClCompile Include="CEllipse.cpp" />
     <ClCompile Include="Cline.cpp" />
     <ClCompile Include="ColorButton.cpp" />

@@ -25,7 +25,10 @@ class CLine :public  IShape
 	virtual float GetRotate() override;
 
 	virtual void AddRotate(float rotate) override;
-
+	std::wstring GetShapeName()
+	{
+		return L"Line";
+	}
 //	virtual void Serialize(CArchive& ar) override;
 	private:
 	float m_rotate = 0.0;

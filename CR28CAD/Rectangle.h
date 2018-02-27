@@ -33,6 +33,10 @@ class CRectangle :public IShape
 	CRect m_rect;
 	public:
 	void Serialize(CArchive& ar) override;
+	std::wstring GetShapeName()
+	{
+		return L"Rectangle";
+	}
 };
 
 class CRectangleFactory :public IShapeFactory

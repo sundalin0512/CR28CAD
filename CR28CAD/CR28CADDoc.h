@@ -50,7 +50,7 @@ class CCR28CADDoc : public CDocument
 #endif // SHARED_HANDLERS
 	public:
 	afx_msg void OnMnHelpCommandsort();
-	private:
+	public:
 	CList<IShape*, IShape*> m_lstShapes;
 	public:
 	virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
