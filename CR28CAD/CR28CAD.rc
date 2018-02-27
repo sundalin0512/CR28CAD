@@ -144,9 +144,6 @@ BEGIN
     END
     POPUP "绘图"
     BEGIN
-        MENUITEM "直线",                          MN_SHAPE_LINE
-        MENUITEM "矩形",                          MN_SHAPE_RECT
-        MENUITEM "椭圆",                          MN_SHAPE_ELLIPSE
         MENUITEM "设置画笔画刷",                      MN_SHAPE_PENBRUSH
         MENUITEM "选择",                          MN_SHAPE_SELLECT
         MENUITEM "旋转",                          MN_SHAPE_ROTATE

@@ -9,9 +9,9 @@
 #include "CR28CAD.h"
 #endif
 
+#include "MainFrm.h"
 #include "CR28CADDoc.h"
 #include "CR28CADView.h"
-#include "CEllipse.h"
 #include "AddOperator.h"
 #include "MoveOperator.h"
 #include "RotateOperator.h"
@@ -36,14 +36,12 @@ BEGIN_MESSAGE_MAP(CCR28CADView, CView)
 	ON_WM_LBUTTONDOWN()
 	ON_WM_LBUTTONUP()
 	ON_WM_MOUSEMOVE()
-	ON_COMMAND(MN_SHAPE_LINE, &CCR28CADView::OnMnShapeLine)
-	ON_COMMAND(MN_SHAPE_RECT, &CCR28CADView::OnMnShapeRect)
 	ON_COMMAND(MN_SHAPE_PENBRUSH, &CCR28CADView::OnShapePenbrush)
 	ON_COMMAND(MN_SHAPE_SELLECT, &CCR28CADView::OnShapeSellect)
-	ON_COMMAND(MN_SHAPE_ELLIPSE, &CCR28CADView::OnMnShapeEllipse)
 	ON_COMMAND(MN_SHAPE_ROTATE, &CCR28CADView::OnMnShapeRotate)
 	ON_COMMAND(ID_EDIT_REDO, &CCR28CADView::OnEditRedo)
 	ON_COMMAND(ID_EDIT_UNDO, &CCR28CADView::OnEditUndo)
+
 END_MESSAGE_MAP()
 
 // CCR28CADView ¹¹Ôì/Îö¹¹
@@ -364,28 +362,7 @@ void CCR28CADView::OnMouseMove(UINT nFlags, CPoint point)
 }
 
 
-void CCR28CADView::OnMnShapeLine()
-{
-	if (m_pShapeFactory != NULL)
-	{
-		delete m_pShapeFactory;
-		m_pShapeFactory = NULL;
-	}
-	m_pShapeFactory = new CLineFactory();
-	m_dwOperaterType = OPTYPE_CREARTESHAPE;
-}
 
-
-void CCR28CADView::OnMnShapeRect()
-{
-	if (m_pShapeFactory != NULL)
-	{
-		delete m_pShapeFactory;
-		m_pShapeFactory = NULL;
-	}
-	m_pShapeFactory = new CRectangleFactory();
-	m_dwOperaterType = OPTYPE_CREARTESHAPE;
-}
 
 
 void CCR28CADView::OnShapePenbrush()
@@ -406,16 +383,6 @@ void CCR28CADView::OnShapeSellect()
 }
 
 
-void CCR28CADView::OnMnShapeEllipse()
-{
-	if (m_pShapeFactory != NULL)
-	{
-		delete m_pShapeFactory;
-		m_pShapeFactory = NULL;
-	}
-	m_pShapeFactory = new CEllipseFactory();
-	m_dwOperaterType = OPTYPE_CREARTESHAPE;
-}
 
 
 void CCR28CADView::OnMnShapeRotate()
@@ -448,3 +415,5 @@ void CCR28CADView::OnEditUndo()
 
 	InvalidateRect(NULL, FALSE);
 }
+
+

@@ -52,4 +52,8 @@
 #endif
 #endif
 
+#include "IShape.h"
 
+typedef IShapeFactory* (*pfn_GetShapeFactoryObj)(void);
+
+#define ID_PLUGIN 50000

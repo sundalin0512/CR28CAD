@@ -3,7 +3,7 @@
 //
 
 #pragma once
-
+#include <list>
 class CMainFrame : public CFrameWnd
 {
 	
@@ -41,6 +41,10 @@ protected:
 public:
   afx_msg void OnMnHelpCommandsort();
   virtual BOOL OnCreateClient(LPCREATESTRUCT lpcs, CCreateContext* pContext);
+  bool LoadPlugin();
+  	afx_msg void OnPlugin(UINT nID);
+
+  std::list<IShapeFactory*> m_Plugins;
 };
 
 

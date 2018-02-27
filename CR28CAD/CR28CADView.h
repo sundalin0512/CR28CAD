@@ -3,8 +3,6 @@
 //
 
 #pragma once
-#include "Cline.h"
-#include "Rectangle.h"
 #include "PenBrushDlg.h"
 #include "OperatorManager.h"
 #include "CR28CADDoc.h"
@@ -22,13 +20,10 @@ class CCR28CADView : public CView
 		CPoint m_ptEnd; //直线的终点
 	}LINE, *PLINE;
 
-	enum
-	{
-		SHAPETYPE_NULL,
-		SHAPETYPE_LINE,
-		SHAPETYPE_RECT
-	};
 
+	
+
+	public:
 	enum
 	{
 		OPTYPE_NULL,
@@ -37,8 +32,6 @@ class CCR28CADView : public CView
 		OPTYPE_ROTATESHAPE, //旋转
 		OPTYPE_MOVESHAPE //移动
 	};
-
-	public:
 	LOGPEN m_logpen;
 	LOGBRUSH m_logbrush;
 
@@ -105,6 +98,7 @@ class CCR28CADView : public CView
 	afx_msg void OnMnShapeRotate();
 	afx_msg void OnEditRedo();
 	afx_msg void OnEditUndo();
+
 };
 
 #ifndef _DEBUG  // CR28CADView.cpp 中的调试版本

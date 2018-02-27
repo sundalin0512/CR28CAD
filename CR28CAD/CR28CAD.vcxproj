@@ -104,8 +104,6 @@
   <ItemGroup>
     <ClInclude Include="AddOperator.h" />
     <ClInclude Include="CADTreeView.h" />
-    <ClInclude Include="CEllipse.h" />
-    <ClInclude Include="Cline.h" />
     <ClInclude Include="ColorButton.h" />
     <ClInclude Include="CR28CAD.h" />
     <ClInclude Include="CR28CADDoc.h" />
@@ -116,7 +114,6 @@
     <ClInclude Include="MoveOperator.h" />
     <ClInclude Include="OperatorManager.h" />
     <ClInclude Include="PenBrushDlg.h" />
-    <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="RotateOperator.h" />
     <ClInclude Include="stdafx.h" />
@@ -125,8 +122,6 @@
   <ItemGroup>
     <ClCompile Include="AddOperator.cpp" />
     <ClCompile Include="CADTreeView.cpp" />
-    <ClCompile Include="CEllipse.cpp" />
-    <ClCompile Include="Cline.cpp" />
     <ClCompile Include="ColorButton.cpp" />
     <ClCompile Include="CR28CAD.cpp" />
     <ClCompile Include="CR28CADDoc.cpp" />
@@ -137,7 +132,6 @@
     <ClCompile Include="MoveOperator.cpp" />
     <ClCompile Include="OperatorManager.cpp" />
     <ClCompile Include="PenBrushDlg.cpp" />
-    <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="RotateOperator.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

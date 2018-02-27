@@ -45,12 +45,6 @@
     <ClInclude Include="Resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Cline.h">
-      <Filter>Shape</Filter>
-    </ClInclude>
-    <ClInclude Include="Rectangle.h">
-      <Filter>Shape</Filter>
-    </ClInclude>
     <ClInclude Include="IShape.h">
       <Filter>Shape</Filter>
     </ClInclude>
@@ -59,9 +53,6 @@
     </ClInclude>
     <ClInclude Include="ColorButton.h">
       <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CEllipse.h">
-      <Filter>Shape</Filter>
     </ClInclude>
     <ClInclude Include="OperatorManager.h">
       <Filter>Operator</Filter>
@@ -98,12 +89,6 @@
     <ClCompile Include="CR28CADView.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Cline.cpp">
-      <Filter>Shape</Filter>
-    </ClCompile>
-    <ClCompile Include="Rectangle.cpp">
-      <Filter>Shape</Filter>
-    </ClCompile>
     <ClCompile Include="IShape.cpp">
       <Filter>Shape</Filter>
     </ClCompile>
@@ -112,9 +97,6 @@
     </ClCompile>
     <ClCompile Include="ColorButton.cpp">
       <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CEllipse.cpp">
-      <Filter>Shape</Filter>
     </ClCompile>
     <ClCompile Include="OperatorManager.cpp">
       <Filter>Operator</Filter>
